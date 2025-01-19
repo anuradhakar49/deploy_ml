@@ -45,7 +45,7 @@ def get_delay():
         
         pkl_file = open('treemodel.pkl', 'rb')
         treemodel = pickle.load(pkl_file)
-        prediction = treemodel.predict(cat_vector)
+        prediction = treemodel.predict(cat_vector.reshape(1, -1))
         
         return render_template('result.html',prediction=prediction)
 
