@@ -43,7 +43,7 @@ def get_delay():
         except:
             pass
         
-        pkl_file = open('logmodel.pkl', 'rb')
+        pkl_file = open('treemodel.pkl', 'rb')
         logmodel = pickle.load(pkl_file)
         prediction = logmodel.predict(cat_vector)
         
